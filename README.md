@@ -3,8 +3,8 @@
 - 使用数据库框架[XCode](https://github.com/NewLifeX/X)的入门级项目，没有什么太高级的写法，仅做入门参考,希望可以对你入门XCode有一丝的帮助
 
 #### 网站截图
-<image src="../Images/PC.png" width="200px" height="150px">
-<image src="../Images/Mobie.png" width="200px" height="150px">
+<image src="Images/PC.png" width="200px" height="150px">
+<image src="Images/Mobie.png" width="200px" height="150px">
 
 #### 后台设计
 1.参考[YuukoBlog](https://github.com/PomeloFoundation/YuukoBlog)
