@@ -1,0 +1,26 @@
+﻿@model Posts
+
+<div class="container-wrap">
+    <div class="container container-message container-details">
+        <div class="contar-wrap">
+            <div class="item">
+                <div class="item-box  layer-photos-demo1 layer-photos-demo">
+                    <h3><a href="details.html">@Model.Title</a></h3>
+                    <h5>发布于：<span>@Model.Time.ToString("yyyy-MM-dd hh:mm:ss")</span></h5>
+                    @{ 
+                        if(Model.Type == 1)
+                        {
+                            <p>@Html.Raw(Model.Content)</p>
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    <p><img src="~/static/images/item.png" alt=""></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

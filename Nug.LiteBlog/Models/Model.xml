@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tables Version="9.9.6940.24706" NameSpace="Nug.Models" ConnName="Conn" Output="" BaseClass="Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.newlifex.com https://raw.githubusercontent.com/NewLifeX/X/master/XCode/ModelSchema.xsd" xmlns="http://www.newlifex.com/ModelSchema.xsd">
+  <Table Name="Posts" Description="文章" DbType="SqlServer" RenderGenEntity="true">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="Url" DataType="String" Description="链接" />
+      <Column Name="Title" DataType="String" Master="True" Nullable="False" Description="标题" />
+      <Column Name="Summary" DataType="String" Length="500" Nullable="False" Description="摘要" />
+      <Column Name="Content" DataType="String" Length="-1" Nullable="False" Description="内容" />
+      <Column Name="Time" DataType="DateTime" Nullable="False" Description="时间" />
+      <Column Name="CatalogsID" DataType="Int32" Description="分类ID" />
+      <Column Name="Type" DataType="Int32" Description="内容类型，markdown/html" />
+    </Columns>
+    <Indexes>
+      <Index Columns="Title" Unique="True" />
+      <Index Columns="Url" Unique="True" />
+    </Indexes>
+  </Table>
+  <Table Name="Catalogs" Description="分类" DbType="SqlServer" RenderGenEntity="true">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="Title" DataType="String" Master="True" Nullable="False" Description="名称" />
+      <Column Name="Url" DataType="String" Nullable="False" Description="链接" />
+    </Columns>
+    <Indexes>
+      <Index Columns="Title" Unique="True" />
+    </Indexes>
+  </Table>
+</Tables>
